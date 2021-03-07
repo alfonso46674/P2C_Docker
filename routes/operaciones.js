@@ -13,7 +13,16 @@ router.post('/suma',(req,res)=>{
 })
 
 router.post('/resta',(req,res)=>{
+    let numberArray = req.body.nums
+    let numberToSub= req.body.numToSub
 
+    for (let i = 0; i < numberArray.length; i++){
+        numberArray[i] = numberArray[i] - numberToSub
+    }
+
+    res.json({
+        result : numberArray
+    })
 })
 
 router.post('/multiplica',(req,res)=>{
