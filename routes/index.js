@@ -3,7 +3,9 @@ const router = require('express').Router()
 const autoresRoute = require("./autores")
 const operacionesRoute = require("./operaciones")
 
+router.use('/',operacionesRoute)
 router.use('/autores', autoresRoute)
+
 
 router.get('/',(req,res)=>{
     res.json({
