@@ -39,7 +39,16 @@ router.post('/multiplica',(req,res)=>{
 })
 
 router.post('/divide',(req,res)=>{
+    let numberArray = req.body.nums
+    let numberToDiv= req.body.numToDiv
 
+    for (let i = 0; i < numberArray.length; i++){
+        numberArray[i] = numberArray[i] / numberToDiv
+    }
+
+    res.json({
+        result : numberArray
+    })
 })
 
 router.post('/free',(req,res)=>{
