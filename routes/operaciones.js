@@ -52,7 +52,13 @@ router.post('/divide',(req,res)=>{
 })
 
 router.post('/free',(req,res)=>{
+    let operation  =req.body.operation
 
+    let result = eval(operation)
+
+    res.json({
+        result: result
+    })
 })
 
 module.exports = router
