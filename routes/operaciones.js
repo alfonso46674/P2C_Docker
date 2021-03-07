@@ -8,7 +8,7 @@ router.post('/suma',(req,res)=>{
     }
 
     res.json({
-        result : sum
+        respuesta : sum
     })
 })
 
@@ -21,7 +21,7 @@ router.post('/resta',(req,res)=>{
     }
 
     res.json({
-        result : numberArray
+        respuesta : numberArray
     })
 })
 
@@ -34,7 +34,7 @@ router.post('/multiplica',(req,res)=>{
         }
 
         res.json({
-            result : multiplication
+            respuesta : multiplication
         })
 })
 
@@ -47,7 +47,7 @@ router.post('/divide',(req,res)=>{
     }
 
     res.json({
-        result : numberArray
+        respuesta : numberArray
     })
 })
 
@@ -57,7 +57,7 @@ router.post('/free',(req,res)=>{
     let result = eval(operation)
 
     res.json({
-        result: result
+        respuesta: result
     })
 })
 
