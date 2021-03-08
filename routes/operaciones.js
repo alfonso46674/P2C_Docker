@@ -14,7 +14,7 @@ router.post('/suma',(req,res)=>{
 
 router.post('/resta',(req,res)=>{
     let numberArray = req.body.nums
-    let numberToSub= req.body.numToSub
+    let numberToSub= req.body.numToSubs
 
     for (let i = 0; i < numberArray.length; i++){
         numberArray[i] = numberArray[i] - numberToSub
